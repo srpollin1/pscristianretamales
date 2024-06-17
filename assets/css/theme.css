@@ -8,7 +8,7 @@
  */
 
 :root {
-  --primary: #6C55F9;
+  --primary: #6B9080;
   --accent: #FF3D85;
   --secondary: #645F88;
   --success: #35bb78;
@@ -27,13 +27,13 @@ body {
 }
 
 a {
-  color: #6C55F9;
+  color: #6B9080;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #5641df;
+  color: #6B9080;
   text-decoration: underline;
 }
 
@@ -140,7 +140,7 @@ a.bg-dark:hover, a.bg-dark:focus {
 }
 
 .text-primary {
-  color: #6C55F9 !important;
+  color: #6B9080 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -409,7 +409,7 @@ a.text-dark:hover, a.text-dark:focus {
 /* Buttons */
 .btn-primary {
   color: #fff;
-  background-color: #6C55F9;
+  background-color: #6B9080;
   border-color: transparent;
 }
 
@@ -481,13 +481,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn-success {
   color: #fff;
-  background-color: #35bb78;
+  background-color: #6B9080;
   border-color: transparent;
 }
 
 .btn-success.disabled, .btn-success:disabled {
   color: #fff;
-  background-color: #28a868;
+  background-color: #6B9080;
   border-color: transparent;
 }
 
@@ -1074,7 +1074,7 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
   font-weight: 500;
-  color: #6C55F9;
+  color: #6B9080;
 }
 
 
@@ -1324,7 +1324,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .back-to-top:hover {
-  background: #6C55F9;
+  background: #6B9080;
 }
 
 .back-to-top:hover::after {
@@ -1430,7 +1430,7 @@ a.text-dark:hover, a.text-dark:focus {
   width: 32px;
   height: 3px;
   border-radius: 40px;
-  background-color: #6C55F9;
+  background-color: #6B9080;
 }
 
 
@@ -1453,7 +1453,7 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 32px;
   text-align: center;
   background-color: #fff;
-  color: #6C55F9;
+  color: #6B9080;
 }
 
 
@@ -1461,7 +1461,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   margin: 16px auto;
   padding: 32px 20px;
-  max-width: 300px;
+  max-width: 750px;
   text-align: center;
   color: #898798;
   border-radius: 8px;
@@ -1717,12 +1717,12 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .page-footer p a {
-  color: #35bb78;
+  color: #6B9080;
   transition: color .2s ease;
 }
 
 .page-footer p a:hover {
-  color: #40d48a;
+  color: #6B9080;
 }
 
 .page-footer h3,
