@@ -31,176 +31,226 @@
       display: inline-block;
     }
   </style>
+  <style>
+    /* Spinner */
+    .loader {
+      width: 50px;
+      aspect-ratio: 1;
+      --_c: no-repeat radial-gradient(farthest-side, #6B9080  92%, #0000);
+      background:
+        var(--_c) top,
+        var(--_c) left,
+        var(--_c) right,
+        var(--_c) bottom;
+      background-size: 12px 12px;
+      animation: l7 1s infinite;
+    }
 
-  <!-- Back to top button -->
-  <div class="back-to-top"></div>
+    /* Preloader overlay */
+    .preloader-overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      /* Cambia el color de fondo según necesites */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
-      <div class="container">
-        <a href="#" class="text-primary" >Ps.<span class="text-primary">Cristian Retamales</span></a>
+    /* Ocultar el contenido principal por defecto */
+    .all-content {
+      display: none;
+    }
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    @keyframes l7 {
+      to {
+        transform: rotate(.5turn);
+      }
+    }
+  </style>
 
-        <div class="navbar-collapse collapse" id="navbarContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html"> ¿Cómo funciona? </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Precios</a>
-            </li>
-            <!-- <li class="nav-item">
+
+  <div class="preloader-overlay">
+    <div class="loader"></div>
+  </div>
+  <div class="all-content" style="display: none;">
+    <!-- Back to top button -->
+    <div class="back-to-top"></div>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+        <div class="container">
+          <a href="#" class="text-primary">Ps.<span class="text-primary">Cristian Retamales</span></a>
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html"> ¿Cómo funciona? </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Precios</a>
+              </li>
+              <!-- <li class="nav-item">
               <a class="nav-link" href="service.html">Psicólogos</a>
             </li> -->
-            <!-- <li class="nav-item">
+              <!-- <li class="nav-item">
               <a class="nav-link" href="blog.html"> Únete al equipo</a>
             </li> -->
-            <!-- <li class="nav-item">
+              <!-- <li class="nav-item">
               <a class="nav-link" href="contact.html"> Para Empresas</a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html"> Blog</a>
-            </li>
-            <!-- <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Blog</a>
+              </li>
+              <!-- <li class="nav-item">
               <a class="nav-link" href="contact.html"> Ubicación</a>
             </li> -->
-            <li class="nav-item">
-              <a class="btn btn-primary ml-lg-2" href="#">Ubicación</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="btn btn-primary ml-lg-2" href="#">Ubicación</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
+      </nav>
 
+      <div class="container">
+        <div class="page-banner home-banner">
+          <div class="row align-items-center flex-wrap h-100" style="background-color: #fefaf5;">
+            <div class="col-md-6 py-5">
+              <h1 class="quiero" style="font-weight: 700; font-size: 3.875rem; color: #6B9080;">Quiero <br>
+                <span class="toggle active" style="color: #A4C3B2;"> sentirme bien</span>
+                <span class="toggle" style="color: #A4C3B2"> ayuda</span>
+                <span class="toggle" style="color: #A4C3B2"> que alguien me escuche</span>
+              </h1>
+              <!-- <p class="text-lg text-grey mb-5">Ignite the most powerfull growth engine you have ever built for your company</p> -->
+              <a href="#" class="btn btn-primary btn-split">Contactame<div class="fab"><span class="mai-play"></span>
+                </div></a>
+            </div>
+            <div class="col-md-6 py-5 wow zoomIn">
+              <div class="img-fluid text-center">
+                <img style="width: 100%;" src="https://www.tuterapiachile.cl/themes/web/img/bg_illust_01.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+        </div>
       </div>
-    </nav>
+    </header>
 
-    <div class="container">
-      <div class="page-banner home-banner">
-        <div class="row align-items-center flex-wrap h-100" style="background-color: #fefaf5;">
-          <div class="col-md-6 py-5">
-            <h1 class="quiero" style="font-weight: 700; font-size: 3.875rem; color: #6B9080;">Quiero <br>
-              <span class="toggle active" style="color: #A4C3B2;"> sentirme bien</span>
-              <span class="toggle" style="color: #A4C3B2"> ayuda</span>
-              <span class="toggle" style="color: #A4C3B2"> que alguien me escuche</span>
+
+    <!-- .page-section -->
+    <div class="page-section">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h1 style="font-size: 5.3rem;">
+              <span style="color: #6B9080;">¿Cómo</span> <br> te podemos <br> ayudar?
             </h1>
-            <!-- <p class="text-lg text-grey mb-5">Ignite the most powerfull growth engine you have ever built for your company</p> -->
-            <a href="#" class="btn btn-primary btn-split">Contactame<div class="fab"><span class="mai-play"></span>
-              </div></a>
+            <br>
+            <p>Todos atravesamos momentos difíciles, desde <br>
+              inseguridades personales hasta problemas en nuestras <br>
+              relaciones. Te invitamos a que empieces a transformar tu <br>
+              vida en terapia con un psicólogo online o cerca de tu zona.
+            </p>
           </div>
-          <div class="col-md-6 py-5 wow zoomIn">
-            <div class="img-fluid text-center">
-              <img style="width: 100%;" src="https://www.tuterapiachile.cl/themes/web/img/bg_illust_01.svg" alt="">
+          <div class="col-md-7">
+            <div class="d-flex flex-wrap">
+              <div class="col-md-4">
+                <div class="card-service wow fadeInUp">
+                  <div class="header" style="margin-bottom: -80px; text-align: left;">
+                    <img style="top: -32px; position: relative; right: 20px; width: 160px;"
+                      src="https://www.tuterapiachile.cl/themes/web/img/bg_how_01.svg" alt="">
+                  </div>
+                  <div class="body">
+                    <h5 class="text-secondary" style="font-size: 1.25rem;">Ánimo</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-service wow fadeInUp">
+                  <div class="header" style="margin-bottom: -80px; text-align: left;">
+                    <img style="top: -32px; position: relative; right: 20px; width: 160px;"
+                      src="https://www.tuterapiachile.cl/themes/web/img/bg_how_03.svg" alt="">
+                  </div>
+                  <div class="body">
+                    <h5 class="text-secondary" style="font-size: 1.25rem;">Relaciones Personales</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-service wow fadeInUp">
+                  <div class="header" style="margin-bottom: -80px; text-align: left;">
+                    <img style="top: -32px; position: relative; right: 20px; width: 160px;"
+                      src="https://www.tuterapiachile.cl/themes/web/img/bg_how_02.svg" alt="">
+                  </div>
+                  <div class="body">
+                    <h5 class="text-secondary" style="font-size: 1.25rem;">Miedos</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-service wow fadeInUp">
+                  <div class="header" style="margin-bottom: -80px; text-align: left;">
+                    <img style="top: -32px; position: relative; right: 20px; width: 160px;"
+                      src="https://www.tuterapiachile.cl/themes/web/img/bg_how_05.svg" alt="">
+                  </div>
+                  <div class="body">
+                    <h5 class="text-secondary" style="font-size: 1.25rem;">Autoestima e Inseguridad</h5>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
       </div>
+
     </div>
-  </header>
 
 
-  <!-- .page-section -->
-  <div class="page-section">
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <h1 style="font-size: 5.3rem;">
-            <span style="color: #6B9080;">¿Cómo</span> <br> te podemos <br> ayudar?
-          </h1>
-          <br>
-          <p>Todos atravesamos momentos difíciles, desde <br>
-            inseguridades personales hasta problemas en nuestras <br>
-            relaciones. Te invitamos a que empieces a transformar tu <br>
-            vida en terapia con un psicólogo online o cerca de tu zona.
-          </p>
-        </div>
-        <div class="col-md-7">
-          <div class="d-flex flex-wrap">
-            <div class="col-md-4">
-              <div class="card-service wow fadeInUp">
-                <div class="header" style="margin-bottom: -80px; text-align: left;">
-                  <img style="top: -32px; position: relative; right: 20px; width: 160px;" src="https://www.tuterapiachile.cl/themes/web/img/bg_how_01.svg" alt="">
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary" style="font-size: 1.25rem;">Ánimo</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-service wow fadeInUp">
-                <div class="header" style="margin-bottom: -80px; text-align: left;">
-                  <img style="top: -32px; position: relative; right: 20px; width: 160px;" src="https://www.tuterapiachile.cl/themes/web/img/bg_how_03.svg" alt="">
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary" style="font-size: 1.25rem;">Relaciones Personales</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-service wow fadeInUp">
-                <div class="header" style="margin-bottom: -80px; text-align: left;">
-                  <img style="top: -32px; position: relative; right: 20px; width: 160px;" src="https://www.tuterapiachile.cl/themes/web/img/bg_how_02.svg" alt="">
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary" style="font-size: 1.25rem;">Miedos</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-service wow fadeInUp">
-                <div class="header" style="margin-bottom: -80px; text-align: left;">
-                  <img style="top: -32px; position: relative; right: 20px; width: 160px;" src="https://www.tuterapiachile.cl/themes/web/img/bg_how_05.svg" alt="">
-                </div>
-                <div class="body">
-                  <h5 class="text-secondary" style="font-size: 1.25rem;">Autoestima e Inseguridad</h5>
-                </div>
-              </div>
+
+    <div class="page-section" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1 class="title-section">Somos la generación que va a terapia</h1>
+            <div class="divider"></div>
+
+            <p>Regístrate ahora y conecta con tu psicólogo ideal.</p>
+            <a href="#" class="btn btn-primary mt-3">Contactame</a>
+          </div>
+          <div class="col-lg-6 py-3 wow fadeInRight">
+            <div class="img-fluid py-3 text-center">
+              <img src="https://www.tuterapiachile.cl/themes/web/img/bg_why_02.svg" alt="">
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-  </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
 
-  
-
-  <div class="page-section" id="about">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 py-3 wow fadeInUp">
-          <h1 class="title-section">Somos la generación que va a terapia</h1>
-          <div class="divider"></div>
-
-          <p>Regístrate ahora y conecta con tu psicólogo ideal.</p>
-          <a href="#" class="btn btn-primary mt-3">Contactame</a>
-        </div>
-        <div class="col-lg-6 py-3 wow fadeInRight">
-          <div class="img-fluid py-3 text-center">
-            <img src="https://www.tuterapiachile.cl/themes/web/img/bg_why_02.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div> <!-- .container -->
-  </div> <!-- .page-section -->
-
-  <div class="col-lg" id="anuncio-1">
-    <div class="card-service wow fadeInUp" style=" height: 250px;">
-      <div class="header" style="margin-bottom: -110px; text-align: left;">
-        <img style="top: -32px;
+    <div class="col-lg" id="anuncio-1">
+      <div class="card-service wow fadeInUp" style=" height: 250px;">
+        <div class="header" style="margin-bottom: -110px; text-align: left;">
+          <img style="top: -32px;
         position: relative;
         left: 420px;
         width: 334px;" src="https://www.tuterapiachile.cl/themes/web/img/bg_prices.png" alt="">
-      </div>
-      <div class="body" style="text-align: left; top: 17px; position: absolute;">
-        <h2>Elige la terapia que te <br> sea más cómoda</h2>
-        <div style="display: flex;">
-          <div class="col-lg-6">
-            <div style="height: 35px;
+        </div>
+        <div class="body" style="text-align: left; top: 17px; position: absolute;">
+          <h2>Elige la terapia que te <br> sea más cómoda</h2>
+          <div style="display: flex;">
+            <div class="col-lg-6">
+              <div style="height: 35px;
           border-radius: 20px;
           display: flex;
           justify-content: center;
@@ -211,12 +261,12 @@
           text-transform: uppercase;
           letter-spacing: 1px;
           margin: 0 0 5px; background-color: #6B9080 ">
-            ONLINE
-          </div>
-          <h2>$31.000</h2>
-          </div>
-          <div class="col-lg-6">
-            <div style="height: 35px;
+                ONLINE
+              </div>
+              <h2>$31.000</h2>
+            </div>
+            <div class="col-lg-6">
+              <div style="height: 35px;
           border-radius: 20px;
           display: flex;
           justify-content: center;
@@ -227,125 +277,126 @@
           text-transform: uppercase;
           letter-spacing: 1px;
           margin: 0 0 5px; background-color: #6B9080;">
-            PRESENCIAL
-          </div>
-          <h2>$36.000</h2>
-          </div>
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
-
-  <!-- Blog -->
-  <div class="page-section">
-    <div class="container">
-      <div class="text-center wow fadeInUp">
-        <div class="subhead">Nuestro Blog</div>
-        <h2 class="title-section">Lee lo último</h2>
-        <div class="divider mx-auto"></div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-lg-4 py-3 wow fadeInUp">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="https://cdn.pixabay.com/photo/2017/01/30/02/20/mental-health-2019924_1280.jpg" alt="">
+                PRESENCIAL
               </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="#">Salud Mental</a></h5>
-              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+              <h2>$36.000</h2>
             </div>
           </div>
+
         </div>
 
-        <div class="col-lg-4 py-3 wow fadeInUp">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="https://cdn.pixabay.com/photo/2020/04/07/04/17/desperate-5011953_1280.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="#">Depresión</a></h5>
-              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3 wow fadeInUp">
-          <div class="card-blog">
-            <div class="header">
-              <div class="post-thumb">
-                <img src="https://cdn.pixabay.com/photo/2020/06/08/16/19/woman-5275027_1280.jpg" alt="">
-              </div>
-            </div>
-            <div class="body">
-              <h5 class="post-title"><a href="#">Relaciones Personales</a></h5>
-              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 mt-4 text-center wow fadeInUp">
-          <a href="#" class="btn btn-primary">Ver más</a>
-        </div>
       </div>
     </div>
-  </div>
 
-  <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
-    <div class="container">
-      <div class="row mb-8">
-        <div class="col-lg-4 py-3">
-          <h3>Ps.Cristian Retamales</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in iusto
-            eligendi iure.</p>
+    <!-- Blog -->
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center wow fadeInUp">
+          <div class="subhead">Nuestro Blog</div>
+          <h2 class="title-section">Lee lo último</h2>
+          <div class="divider mx-auto"></div>
+        </div>
 
-          <div class="social-media-button">
-            <a href="#"><span class="mai-logo-facebook-f"></span></a>
-            <a href="#"><span class="mai-logo-twitter"></span></a>
-            <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-            <a href="#"><span class="mai-logo-instagram"></span></a>
-            <a href="#"><span class="mai-logo-youtube"></span></a>
+        <div class="row mt-5">
+          <div class="col-lg-4 py-3 wow fadeInUp">
+            <div class="card-blog">
+              <div class="header">
+                <div class="post-thumb">
+                  <img src="https://cdn.pixabay.com/photo/2017/01/30/02/20/mental-health-2019924_1280.jpg" alt="">
+                </div>
+              </div>
+              <div class="body">
+                <h5 class="post-title"><a href="#">Salud Mental</a></h5>
+                <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 py-3 wow fadeInUp">
+            <div class="card-blog">
+              <div class="header">
+                <div class="post-thumb">
+                  <img src="https://cdn.pixabay.com/photo/2020/04/07/04/17/desperate-5011953_1280.jpg" alt="">
+                </div>
+              </div>
+              <div class="body">
+                <h5 class="post-title"><a href="#">Depresión</a></h5>
+                <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 py-3 wow fadeInUp">
+            <div class="card-blog">
+              <div class="header">
+                <div class="post-thumb">
+                  <img src="https://cdn.pixabay.com/photo/2020/06/08/16/19/woman-5275027_1280.jpg" alt="">
+                </div>
+              </div>
+              <div class="body">
+                <h5 class="post-title"><a href="#">Relaciones Personales</a></h5>
+                <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4 text-center wow fadeInUp">
+            <a href="#" class="btn btn-primary">Ver más</a>
           </div>
         </div>
-        <div class="col-lg-4 py-3">
-          <h5>Menu</h5>
-          <ul class="footer-menu">
-             <li>
-              <a href="#"> ¿Cómo funciona? </a>
-            </li>
-            <li class="nav-item">
-              <a href="#">Precios</a>
-            </li>
-            <!-- <li class="nav-item">
+      </div>
+    </div>
+
+    <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
+      <div class="container">
+        <div class="row mb-8">
+          <div class="col-lg-4 py-3">
+            <h3>Ps.Cristian Retamales</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in
+              iusto
+              eligendi iure.</p>
+
+            <div class="social-media-button">
+              <a href="#"><span class="mai-logo-facebook-f"></span></a>
+              <a href="#"><span class="mai-logo-twitter"></span></a>
+              <a href="#"><span class="mai-logo-google-plus-g"></span></a>
+              <a href="#"><span class="mai-logo-instagram"></span></a>
+              <a href="#"><span class="mai-logo-youtube"></span></a>
+            </div>
+          </div>
+          <div class="col-lg-4 py-3">
+            <h5>Menu</h5>
+            <ul class="footer-menu">
+              <li>
+                <a href="#"> ¿Cómo funciona? </a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Precios</a>
+              </li>
+              <!-- <li class="nav-item">
               <a href="#">Psicólogos</a>
             </li> -->
-            <!-- <li class="nav-item">
+              <!-- <li class="nav-item">
               <a href="#"> Únete al equipo</a>
             </li> -->
-            <!-- <li class="nav-item">
+              <!-- <li class="nav-item">
               <a href="#"> Para Empresas</a>
             </li> -->
-            <li class="nav-item">
-              <a href="#"> Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">Ubicación</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-4 py-3">
-          <h5>Contactanos</h5>
-          <!-- <p>203 Fake St. Mountain View, San Francisco, California, USA</p> -->
-          <a href="#" class="footer-link">+569 8129 6528</a>
-          <a href="#" class="footer-link">pscristianretamales@gmail.com</a>
-        </div>
-        <!-- <div class="col-lg-3 py-3">
+              <li class="nav-item">
+                <a href="#"> Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Ubicación</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 py-3">
+            <h5>Contactanos</h5>
+            <!-- <p>203 Fake St. Mountain View, San Francisco, California, USA</p> -->
+            <a href="#" class="footer-link">+569 8129 6528</a>
+            <a href="#" class="footer-link">pscristianretamales@gmail.com</a>
+          </div>
+          <!-- <div class="col-lg-3 py-3">
           <h5>Newsletter</h5>
           <p>Get updates, news or events on your mail.</p>
           <form action="#">
@@ -353,12 +404,26 @@
             <button type="submit" class="btn btn-success btn-block mt-2">Subscribe</button>
           </form>
         </div> -->
-      </div>
+        </div>
 
-      <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a
-          href="https://macodeid.com/" target="_blank"> Ps.Cristian Retamales</a></p>
-    </div>
-  </footer>
+        <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a
+            href="https://macodeid.com/" target="_blank"> Ps.Cristian Retamales</a></p>
+      </div>
+    </footer>
+
+  </div>
+  <script>
+    // Espera a que se cargue el documento
+    document.addEventListener("DOMContentLoaded", function () {
+      // Simula un tiempo de carga (puedes ajustar el tiempo según necesites)
+      setTimeout(function () {
+        // Oculta el preloader
+        document.querySelector('.preloader-overlay').style.display = 'none';
+        // Muestra el contenido principal
+        document.querySelector('.all-content').style.display = 'block';
+      }, 3000); // 3000 milisegundos = 3 segundos
+    });
+  </script>
 
   <script>
     console.log("hola");
